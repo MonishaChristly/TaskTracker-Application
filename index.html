@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="custom-bg">
+  <!-- Logout Button -->
+  <div style="display: flex; justify-content: flex-end; padding: 1rem;">
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
+
+  <!-- Main Page Container -->
+  <div class="page-wrapper">
+
+    <!-- Task Form Container -->
+    <div class="tracker-container">
+      <form id="taskForm" class="tracker-form">
+        <h2 style="text-align: center;">Task Tracker</h2>
+        <input type="text" id="title" placeholder="Task Title" required class="form-control" />
+        <textarea id="description" placeholder="Task Description" rows="3" class="form-control"></textarea>
+        <div class="form-row">
+          <input type="date" id="dueDate" class="form-control" />
+          <select id="priority" class="form-control">
+            <option value="">Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <button type="submit" class="custom-button">Add Task</button>
+      </form>
+    </div>
+
+    <!-- Task List Container -->
+    <div class="tasks-container">
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
